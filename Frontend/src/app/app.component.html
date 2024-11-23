@@ -1,0 +1,23 @@
+<!--BONNELL Branch-->
+<!--Code by : Hugo Bonnell | ESILV A4 | DIA2/CDOF4-->
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+        <a class="navbar-brand" href="/">Navbar</a> 
+        <ul class="navbar-nav mr-auto"> 
+            <li ngbDropdown class="nav-item dropdown"> 
+                <a ngbDropdownToggle id="navbarMenu" class="nav-link dropdown-toggle" role="button"> Main Menu </a> 
+                <div ngbDropdownMenu aria-labelledby="navbarMenu" class="dropdown-menu"> 
+                    <a class="dropdown-item" routerLink="lesson-edit-form">Lesson Edit Form</a>
+                    <a class="dropdown-item" routerLink="/"><fa-icon [icon]='faHome'/> Home</a>
+                </div>
+            </li> 
+        </ul>
+    </nav>           
+</body>
+
+
+
+<router-outlet/>
+
+

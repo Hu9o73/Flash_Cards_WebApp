@@ -21,6 +21,13 @@ Front/Back-end small project to discover web development. Made as part of the No
 - You can now access `localhost:3000/api-docs` to check the backend's api documentation.
 - `localhost:3000/api/liveness` will return OK if the server is running.
 
+### Frontend
+
+- In another Terminal window, navigate to the Frontend File:
+    - Type `npm install` to download all the dependencies.
+    - Type `npm start`to start the app on port 4200
+- If successful, you can access `localhost:4200` to use the app as a website.
+
 ## Previous repos where the project was stored (deprecated versions):
 
 ### Backend previous repo:

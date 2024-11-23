@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">Title:</div>
+    <div class="col-md-9"><input type="text" class="form-control" id="title" placeholder="Enter title"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">Description:</div>
+    <div class="col-md-9"><textarea class="form-control" id="description" placeholder="Enter description"></textarea></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">Category:</div>
+    <div class="col-md-9"><select class="form-control" id="category">
+      <option value="">Select category</option>
+      <!-- add options here -->
+    </select></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">Level:</div>
+    <div class="col-md-9"><select class="form-control" id="level">
+      <option value="">Select level</option>
+      <!-- add options here -->
+    </select></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">Prerequisite:</div>
+    <div class="col-md-9"><input type="text" class="form-control" id="prerequisite" placeholder="Enter prerequisite (comma separated)"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">Tags:</div>
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="tags" placeholder="Enter tags (comma separated)">
+      <button class="btn btn-primary" id="add-tag-btn">Add</button>
+      <ul id="tag-list"></ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">Copyright:</div>
+    <div class="col-md-9"><input type="text" class="form-control" id="copyright" placeholder="Enter copyright"></div>
+  </div>
+  <div class="row">
+    <button type="button" class = "btn btn-primary" (click)="onClickSubmit()">Submit</button>
+  </div>
+</div>
