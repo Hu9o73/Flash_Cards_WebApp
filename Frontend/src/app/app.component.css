@@ -3,3 +3,19 @@
   border-color: red;
   border-width: 1pt;
 }
+
+.home {
+  display: flex;
+  align-items: center;  /* Aligns the label and icon vertically */
+  padding-top: 0px;      /* Adjust paddings for further control if needed*/
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;  /* Aligns the label and icon vertically */
+  padding-top: 0px;      /* Adjust paddings for further control if needed*/
+  padding-left: 5px;
+  padding-right: 5px;
+}
