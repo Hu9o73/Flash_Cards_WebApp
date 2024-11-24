@@ -22,6 +22,9 @@ const PORT = process.env.PORT || 3000;
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 
 // SWAGGER
 
