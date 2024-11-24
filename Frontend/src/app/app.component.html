@@ -4,14 +4,26 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
         <a class="navbar-brand" href="/">Navbar</a> 
+
         <ul class="navbar-nav mr-auto"> 
+
+            <li class="nav-item home">
+                <a class="dropdown-item" routerLink="/">
+                    <fa-icon [icon]='faHome'/> 
+                    Home
+                </a>
+            </li>
+
             <li ngbDropdown class="nav-item dropdown"> 
-                <a ngbDropdownToggle id="navbarMenu" class="nav-link dropdown-toggle" role="button"> Main Menu </a> 
+                <a ngbDropdownToggle id="navbarMenu" class="nav-link dropdown-toggle" role="button"> LearningPackages </a>
+
                 <div ngbDropdownMenu aria-labelledby="navbarMenu" class="dropdown-menu"> 
                     <a class="dropdown-item" routerLink="/packages-list">Learning Packages List</a>
-                    <a class="dropdown-item" routerLink="/"><fa-icon [icon]='faHome'/> Home</a>
+                    <a class="dropdown-item" routerLink="/create-package">Create a Learning Package</a>
                 </div>
+
             </li>
+            
         </ul>
     </nav>           
 </body>
