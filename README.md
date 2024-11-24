@@ -36,5 +36,12 @@ https://github.com/ESILV-4-A4-STD/devinci-web-expressjs-cdof4/tree/Bonnell
 ### Frontend previous repo:
 https://github.com/ESILV-4-A4-STD/devinci-web-angularjs-cdof4/tree/Bonnell
 
+### Features:
+- Learning Packages Listing/Creation.
+- Learning Facts Listing/Creation.
+- Doesn't feature user management yet.
+
 ### Note:
 All code featured in this repo, or in the linked repos in a branch called "Bonnell" or that I own, is mine.
+App made to get hands-on experience with Angular, NodeJs, Postgres, HTML, Typescript, Bootstrap and so much more components of full-stack web dev !
+

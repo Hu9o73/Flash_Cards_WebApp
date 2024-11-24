@@ -1,17 +1,18 @@
 <div class="learning-packages">
-    <h1>Learning Packages</h1>
-    <ul *ngIf="learningPackages$ | async as learningPackages; else noPackages">
+  <h1>Learning Packages</h1>
+  <ul *ngIf="learningPackages$ | async as learningPackages; else noPackages">
 
-      <li *ngFor="let pkg of learningPackages">
-        <h2>{{ pkg.title }}</h2>
-        <p>{{ pkg.description }}</p>
-        <small>Category: {{ pkg.category }} | Difficulty: {{ pkg.difficultyLevel }}</small>
-        <br><hr>
-      </li>
-    </ul>
-  
-    <ng-template #noPackages>
-      <p>No learning packages available.</p>
-    </ng-template>
-  </div>
-  
+    <li *ngFor="let pkg of learningPackages">
+      <h2>{{ pkg.title }}</h2>
+      <p>{{ pkg.description }}</p>
+      <small>Category: {{ pkg.category }} | Difficulty: {{ pkg.difficultyLevel }}</small>
+      <br><br>
+      <button (click)="viewLearningFacts(pkg.id)" class="btn btn-success">Show Learning Facts</button>
+      <br><hr>
+    </li>
+  </ul>
+
+  <ng-template #noPackages>
+    <p>No learning packages available.</p>
+  </ng-template>
+</div>
