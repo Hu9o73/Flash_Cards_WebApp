@@ -39,5 +39,5 @@ LearningFact.init(
 );
 
 // Establish relationship
-LearningPackage.hasMany(LearningFact, { foreignKey: 'packageId' });
+LearningPackage.hasMany(LearningFact, { foreignKey: 'packageId', onDelete: 'CASCADE' });
 LearningFact.belongsTo(LearningPackage, { foreignKey: 'packageId' });

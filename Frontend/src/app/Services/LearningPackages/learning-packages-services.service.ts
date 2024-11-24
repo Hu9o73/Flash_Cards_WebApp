@@ -37,4 +37,8 @@ export class LearningPackagesService {
     const factData = { content }; // Create the fact object to send in the body
     return this.http.post<any>(`${this.API_URL}/${packageId}/fact`, factData);
   }
+
+  deletePackage(packageId: number): Observable<void> {
+    return this.http.delete<void>(`${this.API_URL}/${packageId}`); // Assumes your backend is set up to handle DELETE requests
+  }
 }

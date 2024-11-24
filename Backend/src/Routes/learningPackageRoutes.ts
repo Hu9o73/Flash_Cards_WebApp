@@ -1,6 +1,6 @@
 import express, { Router, Request, Response } from 'express';
 import { LearningPackage } from '../models/LearningPackage';
-
+import { LearningFact } from '../models/LearningFact';
 
 const router = Router();
 router.use(express.json());
@@ -101,5 +101,31 @@ router.put('/api/package/:id', async (req: Request, res: Response) => {
     }
 });
 
+
+// DELETE Route to remove a learning Package
+router.delete('/api/package/:id', async (req, res) => {
+  const packageId = parseInt(req.params.id);
+
+  try {
+    // Validate if the package exists
+    const learningPackage = await LearningPackage.findByPk(packageId);
+    if (learningPackage) {
+      // Remove all associated facts (if stored in a separate table/collection)
+      await LearningFact.destroy({ where: { packageId: packageId } });
+
+      // Remove the learning package
+      await LearningPackage.destroy({ where: { id: packageId } });
+
+      res.status(200).json({ message: 'Learning package and associated facts deleted successfully' });
+    }else{
+      res.status(404).json({ message: 'Learning package not found' });
+    }
+
+    
+  } catch (error) {
+    console.error('Error deleting learning package:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 export default router;

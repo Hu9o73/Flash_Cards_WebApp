@@ -8,6 +8,8 @@
       <small>Category: {{ pkg.category }} | Difficulty: {{ pkg.difficultyLevel }}</small>
       <br><br>
       <button (click)="viewLearningFacts(pkg.id)" class="btn btn-success">Show Learning Facts</button>
+      <br>
+      <button (click)="deletePackage(pkg.id)" class="btn btn-danger btn-sm">Delete</button>
       <br><hr>
     </li>
   </ul>

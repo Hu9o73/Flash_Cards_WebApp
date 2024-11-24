@@ -23,7 +23,7 @@
  * /api/package:
  *   get:
  *     tags: 
- *        - LearningPackage
+ *        - Learning Packages
  *     summary: Retrieve all Learning Packages.
  *     responses:
  *       200:
@@ -50,7 +50,7 @@
  * /api/package-summaries:
  *   get:
  *     tags: 
- *        - LearningPackage
+ *        - Learning Packages
  *     summary: Retrieve only the summaries (id and title) of all Learning Packages.
  *     responses:
  *       200:
@@ -77,7 +77,7 @@
  * /api/package/{id}:
  *   get:
  *     tags: 
- *        - LearningPackage
+ *        - Learning Packages
  *     summary: Retrieve a Learning Package by its ID.
  *     parameters:
  *       - name: id
@@ -104,7 +104,7 @@
  * /api/package:
  *   post:
  *     tags: 
- *        - LearningPackage
+ *        - Learning Packages
  *     summary: Create a new Learning Package.
  *     requestBody:
  *       required: true
@@ -144,7 +144,7 @@
  * /api/package/{id}:
  *   put:
  *     tags: 
- *        - LearningPackage
+ *        - Learning Packages
  *     summary: Update an existing Learning Package by its ID.
  *     parameters:
  *       - name: id
@@ -171,6 +171,55 @@
  */
 //
 
+// DELETE a learning package by id
+/**
+ * @swagger
+ * /api/package/{id}:
+ *   delete:
+ *     summary: Remove a learning package and its associated facts
+ *     description: Deletes a learning package by its ID and also removes all learning facts associated with it.
+ *     tags:
+ *       - Learning Packages
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: The ID of the learning package to be deleted.
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Learning package and associated facts deleted successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Learning package and associated facts deleted successfully.
+ *       404:
+ *         description: Learning package not found.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Learning package not found.
+ *       500:
+ *         description: Internal server error.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Internal server error.
+ */
+//
 
 
 // LEARNING FACTS

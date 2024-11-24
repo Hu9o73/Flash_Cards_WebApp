@@ -27,4 +27,19 @@ export class LearningPackagesListPageComponent {
     // Navigate to a new route that will display the facts for this package
     this.router.navigate(['/learning-facts/', packageId]);
   }
+
+  // Refresh the packages
+  refreshLearningPackages(): void {
+    this.learningPackages$ = this.LearningPackagesService.getAllPackages();
+  }
+
+  // Delete a package
+  deletePackage(packageId: number): void {
+    if (confirm('Are you sure you want to delete this package?')) {
+      this.LearningPackagesService.deletePackage(packageId).subscribe(() => {
+        alert('Package deleted successfully!');
+        this.refreshLearningPackages(); // Refresh the list after deletion
+      });
+    }
+  }
 }

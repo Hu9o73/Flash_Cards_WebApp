@@ -51,4 +51,6 @@ LearningPackage.init(
       tableName: 'learning_packages', // Optional: You can specify the exact table name
       timestamps: false, // Optional: if you don't want Sequelize to manage createdAt/updatedAt columns
     }
-  );  
+);
+
+
