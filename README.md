@@ -17,7 +17,7 @@ Front/Back-end small project to discover web development. Made as part of the No
 - After navigating inside of the Backend file:
     - Type `npm install` to download all the dependecies.
     - Type `npm start` to start the server on port 3000.
-- If successful, the terminal should output that the server is running on port 3000 and that the DB has been synchronized and seeded.
+- If successful, the terminal should output that the server is running on port 3000 and that the DB has been synchronized and seeded. 4 Learning Packages and 8 learning facts should be automatically seeded if everything is installed correctly.
 - You can now access `localhost:3000/api-docs` to check the backend's api documentation.
 - `localhost:3000/api/liveness` will return OK if the server is running.
 
